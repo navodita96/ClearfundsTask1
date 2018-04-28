@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    padding: 10px;
+    margin-bottom: 8px 0;
+    background-color: #33b5e5;;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu{
+color: white;
+background-color: #9933cc;
+}
+
+
+
+input:checked + li{
+    background-color:yellow;
+    color:black;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="row">
+<div class="col-4"></div>
+<div class="col-4 menu">
+<a>FILTERS</a>
+  <ul multiple="multiple">
+    <!--the elements of the list can only be selected using a checkbox, else JS or JQuery needs to be used to getbthe desired output. thus, a checkbox was added and every time it's selected or deselected the list item's CSS changes, somewhat i tried to implemented multiple selections and toggles using checkboxes, but i don't the technique of hiding the checkbox and selecting or deselecting it.. -->
+    <input type="checkbox" ><li> Balcony Some stuff</li>
+    <input type="checkbox" ><li>hiiiii Some stuff 2</li>
+    <input type="checkbox" ><li>shago Some stuff</li>
+    <input type="checkbox" ><li> navo Some stuff</li>
+  </ul>
+</div>
+<div class="col-4"></div>
+
+
+</div>
+
+</body>
+</html>
